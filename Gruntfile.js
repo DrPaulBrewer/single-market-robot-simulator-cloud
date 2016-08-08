@@ -38,6 +38,12 @@ module.exports = function(grunt){
 		    'cd ./run',
 		    'for d in */*; do ( cd $d; node ../../../node_modules/single-market-robot-simulator/build/index.js ) & done',
 		    'wait'].join(';')
+	    },
+	    uploadToBucket: {
+		command: [
+		    'cd ./run',
+		    'gsutil cp -r . '+process.env.BUCKET
+		    ].join(';')
 	    }
 	}
     });
@@ -58,6 +64,6 @@ module.exports = function(grunt){
 	);
     });
 
-    grunt.registerTask('default',['http:getConfigJson', 'makedirs', 'shell:simulations']);
+    grunt.registerTask('default',['http:getConfigJson', 'makedirs', 'shell:simulations','shell:uploadToBucket']);
 
 };
