@@ -1,0 +1,25 @@
+{
+  "name": "single-market-robot-simulator-cloud",
+  "version": "0.1.0",
+  "description": "cloud grunt-based backend to run a robot-trading-webapp style Scenario using single-market-robot-simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrPaulBrewer/single-market-robot-simulator-cloud.git"
+  },
+  "author": "drpaulbrewer@eaftc.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DrPaulBrewer/single-market-robot-simulator-cloud/issues"
+  },
+  "homepage": "https://github.com/DrPaulBrewer/single-market-robot-simulator-cloud#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-http": "^2.0.1",
+    "grunt-http-upload": "^0.2.0",
+    "single-market-robot-simulator": "^0.50.3"
+  }
+}

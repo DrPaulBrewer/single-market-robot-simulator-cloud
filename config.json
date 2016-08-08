@@ -1,0 +1,213 @@
+{
+  "title": "competition/monopoly/monopsony:  zi agents with order books: (10 buyers+10 sellers) vs (10 buyers+1 seller) vs (1 buyer+10 sellers)",
+  "periods": 1000,
+  "version": 1,
+  "configurations": [
+    {
+      "buyerValues": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "sellerCosts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51
+      ],
+      "L": 1,
+      "H": 200,
+      "numberOfBuyers": 10,
+      "numberOfSellers": 10,
+      "periodDuration": 1000,
+      "buyerRate": 0.2,
+      "sellerRate": 0.2,
+      "buyerAgentType": [
+        "ZIAgent"
+      ],
+      "sellerAgentType": [
+        "ZIAgent"
+      ],
+      "integer": false,
+      "keepPreviousOrders": false,
+      "ignoreBudgetConstraint": false,
+      "silent": true,
+      "xMarket": {
+        "buySellBookLimit": 0,
+        "resetAfterEachTrade": false
+      },
+      "version": 1
+    },
+    {
+      "buyerValues": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "sellerCosts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51
+      ],
+      "L": 1,
+      "H": 200,
+      "numberOfBuyers": 10,
+      "numberOfSellers": 1,
+      "periodDuration": 1000,
+      "buyerRate": 0.2,
+      "sellerRate": 0.2,
+      "buyerAgentType": [
+        "ZIAgent"
+      ],
+      "sellerAgentType": [
+        "ZIAgent"
+      ],
+      "integer": false,
+      "keepPreviousOrders": false,
+      "ignoreBudgetConstraint": false,
+      "silent": true,
+      "xMarket": {
+        "buySellBookLimit": 0,
+        "resetAfterEachTrade": false
+      },
+      "version": 1
+    },
+    {
+      "buyerValues": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "sellerCosts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51
+      ],
+      "L": 1,
+      "H": 200,
+      "numberOfBuyers": 1,
+      "numberOfSellers": 10,
+      "periodDuration": 1000,
+      "buyerRate": 0.2,
+      "sellerRate": 0.2,
+      "buyerAgentType": [
+        "ZIAgent"
+      ],
+      "sellerAgentType": [
+        "ZIAgent"
+      ],
+      "integer": false,
+      "keepPreviousOrders": false,
+      "ignoreBudgetConstraint": false,
+      "silent": true,
+      "xMarket": {
+        "buySellBookLimit": 0,
+        "resetAfterEachTrade": false
+      },
+      "version": 1
+    }
+  ],
+  "zipfileName": "20160806T2226",
+  "zipfileDate": 1470522394133
+}
