@@ -1,5 +1,3 @@
-const SMRS = require('single-market-robot-simulator');
-
 function pad(x){
     "use strict";
     return (x<10)? ("0"+x) : (''+x);
@@ -33,10 +31,19 @@ module.exports = function(grunt){
 		dest: './config.json'
 	    }
 	},
-	datestamp: myDateStamp()
+	datestamp: myDateStamp(),
+	shell: {
+	    simulations: {
+		command: [
+		    'cd ./run',
+		    'for d in */*; do ( cd $d; node ../../../node_modules/single-market-robot-simulator/build/index.js ) & done',
+		    'wait'].join(';')
+	    }
+	}
     });
 
     grunt.loadNpmTasks('grunt-http');
+    grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask('makedirs', 'making directories and configuration file for each simulation', function(){
 	const scenario = grunt.file.readJSON('./config.json');
@@ -51,24 +58,6 @@ module.exports = function(grunt){
 	);
     });
 
-    grunt.registerTask('simulations','run simulations for each portion of the scenario', function(){
-	function runSimulation(dir){ 
-	    const cwd = process.cwd();
-	    grunt.file.setBase(dir);
-	    const config = grunt.file.readJSON("./config.json");
-	    if (config.configurations)
-		throw new Error("this is the wrong file");
-	    const sim = new SMRS.Simulation(config);
-	    sim.run({sync:true});
-	    grunt.file.setBase(cwd);
-	}
-	(grunt
-	 .file
-	 .expand("run/"+grunt.config.get('datestamp')+"/*")
-	 .forEach(runSimulation)
-	);
-    });
-
-    grunt.registerTask('default',['http:getConfigJson', 'makedirs', 'simulations']);
+    grunt.registerTask('default',['http:getConfigJson', 'makedirs', 'shell:simulations']);
 
 };
