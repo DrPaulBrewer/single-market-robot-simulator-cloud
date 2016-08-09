@@ -82,8 +82,7 @@ module.exports = function(grunt){
 	'makedirs', 
 	'shell:simulations',
 	'shell:zip',
-	'shell:uploadToSite',
-	'shell:shutdown'
+	'shell:uploadToSite'
     ]);
 
 };
