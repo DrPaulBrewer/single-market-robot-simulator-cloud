@@ -20,6 +20,6 @@
     "grunt": "^1.0.1",
     "grunt-http": "^2.0.1",
     "grunt-shell": "^1.3.0",
-    "single-market-robot-simulator": "^0.50.3"
+    "single-market-robot-simulator": "^0.51.0"
   }
 }
