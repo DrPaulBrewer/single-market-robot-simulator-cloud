@@ -1,6 +1,6 @@
 {
   "name": "single-market-robot-simulator-cloud",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "cloud grunt-based backend to run a robot-trading-webapp style Scenario using single-market-robot-simulator",
   "main": "index.js",
   "scripts": {
